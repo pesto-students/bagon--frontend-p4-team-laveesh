@@ -8,21 +8,25 @@ import LoginForm from "./components/Login/LoginForm";
 import Navbar from "./components/Navbar/Navbar";
 import SecondaryNavbar from "./components/Navbar/SecondaryNavbar";
 import SignupForm from "./components/Signup/SignupForm";
+import SideBarInput from "./components/Sidebar/SiderbarInput.jsx";
+import AdminPage from "./components/Admin-Forms/Admin-Page-2.jsx";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar />
       <SecondaryNavbar />
       <HeroSection />
       <HowItworks />
       <Index />
       <WhyChooseUS />
       <InquirySection />
-      <FooterSection />
+      <FooterSection /> */}
 
       {/* <LoginForm />
       <SignupForm /> */}
+      {/* <SideBarInput /> */}
+      <AdminPage />
     </div>
   );
 }
