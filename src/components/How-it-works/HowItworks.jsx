@@ -7,11 +7,19 @@ const Container = styled.div`
   justify-content: space-between;
   width: 100%;
   height: 40vh;
+<<<<<<< HEAD
   padding: 4rem;
+=======
+  /* padding: 4rem; */
+>>>>>>> dev-frontend
   background-color: #f5f2f2;
 `;
 
 const Right = styled.div`
+<<<<<<< HEAD
+=======
+  padding: 3rem;
+>>>>>>> dev-frontend
   h3 {
     margin-bottom: 2rem;
   }
@@ -30,7 +38,10 @@ const Left = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3rem;
+<<<<<<< HEAD
   margin-right: 3rem;
+=======
+>>>>>>> dev-frontend
 `;
 
 const Package = styled.div`
