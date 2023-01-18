@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GoogleIcon from "../../assets/images/SocialButtonGoogle.png";
-import TwitterIcon from "../../assets/images/SocialButtonTwitter.png";
-import FacebookIcon from "../../assets/images/SocialButtonFacebook.png";
-import AppleIcon from "../../assets/images/SocialButtonApple.png";
+
 import FooterImage from "../../assets/images/FooterImage.webp";
 
 const Container = styled.div`

@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+
 import Shimla from "../../assets/images/Shimla.webp";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -9,7 +9,6 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import Divider from "@mui/material/Divider";
-import { width } from "@mui/system";
 
 function DestinationCard() {
   return (

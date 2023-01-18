@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import InquirySectionImage from "../../assets/images/InquirySectionImage.webp";
 import InquirySectionFormImage from "../../assets/images/InquirySectionFormImage.webp";
-import { Button } from "@mui/material";
-import { fontWeight } from "@mui/system";
 
 const Container = styled.div`
   width: 100%;
