@@ -58,6 +58,28 @@ const SocialContainer = styled.div`
 `;
 
 function SignupForm() {
+  const [firstName,setFirstName]=useState("");
+  const [lastName,setLastName]=useState("");
+  const [email,setEmail]=useState("");
+  const [password,setPassword]=useState("");
+ function saveData()
+ {
+   let data={firstName,lastName,email,}
+ // console.warn(data);
+   fetch("http://localhost:3001/api/users", {
+     method: "POST",
+     headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json',
+     },
+     body:JSON.stringify(data)
+   }).then((resp)=>{
+     // console.warn("resp",resp);;
+     resp.json().then((result)=>{
+       console.warn("result",result)
+     })
+   })
+ }
   return (
     <Container>
       <Wrapper>
@@ -67,11 +89,12 @@ function SignupForm() {
             Become a member -- you'll enjoy exclusive <br /> deals, offers
             invites and rewards
           </p>
-          <Input placeholder="Name" />
-          <Input type="email" placeholder="Email" />
+          <Input placeholder="Name"  value={firstName} onChange={(e)=>{setFirstName(e.target.value)}} />
+          <Input placeholder="Name"  value={lastName} onChange={(e)=>{setLastName(e.target.value)}} />
+          <Input type="email" placeholder="Email"  value={email} onChange={(e)=>{setEmail(e.target.value)}} />
           <Input type="password" placeholder="Password" />
-          <Input type="password" placeholder="Confirm Password" />
-          <button>SIGN UP</button>
+          <Input type="password" placeholder="Confirm Password"  value={password} onChange={(e)=>{setPassword(e.target.value)}} />
+          <button onClick={saveData}>SIGN UP</button>
           <SocialContainer>
             <Button variant="" startIcon={<FacebookOutlinedIcon />}>
               Sign up with Facebook

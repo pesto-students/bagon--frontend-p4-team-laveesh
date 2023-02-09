@@ -39,17 +39,39 @@ const Form = styled.form`
   }
 `;
 
-function AdminForm2() {
+function adminFormPlaces() {
+  const [placeName,setplaceName]=useState("");
+  const [description,setdescription]=useState("");
+  const [bestTime,setbestTime]=useState("");
+
+ function saveData()
+ {
+   let data={placeName,description,bestTime}
+ // console.warn(data);
+ fetch("http://localhost:3001/", {
+  method: "POST",
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body:JSON.stringify(data)
+}).then((resp)=>{
+  // console.warn("resp",resp);;
+  resp.json().then((result)=>{
+    console.warn("result",result)
+  })
+})
+ }
   return (
     <Container>
       <Wrapper>
         <Form>
           <h1>Admin Form</h1>
           <p>Add New Place</p>
-          <Input placeholder="Place Name" />
-          <Input placeholder="Description" />
+          <Input placeholder="Place Name" value={placeName} onChange={(e)=>{setplaceName(e.target.value)}}/>
+          <Input placeholder="Description" value={description} onChange={(e)=>{setdescription(e.target.value)}}/>
 
-          <Input placeholder="Season" />
+          <Input placeholder="Best time to visit" value={bestTime} onChange={(e)=>{setbestTime(e.target.value)}}/>
           <Input type="file" id="img" name="img" accept="image/*" />
           <button>Submit</button>
         </Form>
@@ -58,4 +80,4 @@ function AdminForm2() {
   );
 }
 
-export default AdminForm2;
+export default adminFormPlaces;
